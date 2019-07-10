@@ -899,7 +899,7 @@ class HTTPSConnectionPool(HTTPConnectionPool):
         )
 
         self.key_file = key_file
-        self.cert_file = cert_file
+        self.cert_file = cert_filei
         self.cert_reqs = cert_reqs
         self.key_password = key_password
         self.ca_certs = ca_certs
@@ -992,6 +992,7 @@ class HTTPSConnectionPool(HTTPConnectionPool):
                 ),
                 InsecureRequestWarning,
             )
+            print(str(conn))
 
 
 def connection_from_url(url, **kw):
